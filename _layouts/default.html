@@ -45,48 +45,10 @@
 								<!-- Main Content -->
 								<section>
 									<header>
-										<h2>This should be easier</h2>
-											<h3>13 Dec 2023</h3>
+										<h2>{{ header }}</h2>
+											<h3>{{ date }}</h3>
 										</header>
-										<p>
-											Another day, another existential dread. I've done the ritual of applying to a couple jobs I'd probably not get so that I can tell myself
-											that I can now work on self-improvement.
-										</p>
-										<p>
-											I have been trying to setup a workflow for myself in order to document my shenanigans here as I go. The concept was simple, put thoughts
-											and processes on site. The execution was not so simple, go back in high school and write them in css and html (this isn't wordpress yall). 
-											I've been doing this in trusty old VSCode, but have been pushing my commits to Github so that I can see if the page formatting was right, etc, 
-											etc. This got old really fast, and I was considering setting up a server when I thought that VSCode probably has an extension for this. Unlike myself,
-											it did not disappoint. I got me the Live Preview extension and can now check the pages I'm working on without having to push commits like a maniac.
-											Figuratively patting myself on the back for showcasing my ability to "identify rooms for improvement". *wink wink*
-										</p>
-										<p>
-											Now perhaps next step is to find a way to streamline the process of creating a new post. Creating new html files for each just isn't cutting
-											it for me, I want this to be almost like blogging. I can only do static webpages on Github pages, and after checking its website, it says Jekyll
-											should allow me to create pages using markdown and make it less copy pasty on my end. As much as I <i>love</i> re/learning all this html and css,
-											using markdown as opposed to html should make things easier for me. <i>Should.</i>
-										</p>
-										<p>
-											So first things first, I need to create a base layout file (i.e. template) that each post will pull from. This needs to be in a folder called _layouts.
-											Alright, folder created. Now I'm going to create a default html file and just yoink the html that I have been copy pasting so far and *this* is where
-											I would put a picture of the code if it wasn't such a pain in the butt to do in my current workflow. Hopefully, after working this out, it won't be.
-										</p>
-										<p>
-											Default layout is done. I have three "front matters" on that layout - header, date, and content. Basically, they are variables that I can set at the
-											beginning of the html or markdown file. Content here is a special variable that contains the content (duh) of the file invoking the layout. Now to test
-											this out, I'm going to create a markdown file and set the header and date front matter like so:
-										</p>
-										<p><code> --- </code></p>
-										<p><code> layout: default </code></p>
-										<p><code> date: 13 Dec 2023 </code></p>
-										<p><code> --- </code></p>
-										<p>
-											Perhaps after this I'd also be able to format the above snippet less atrociously. Anyway, now I run into the problem of not being able to test this unless
-											I build it using Jekyll, in other words, I need to push it to Github pages if I want to see if it worked. I just solved this issue 4 paragraphs ago, now it's
-											an issue again. Fantastic. Unfortunately, VSCode isn't willing to bail me out this time. There is one extension that <i>could</i> do what I think I want but
-											it still needs me to setup Jekyll on my end which I'm not willing to do, <i>yet</i>. On to maniacal pushing, I go.
-										</p>
-										
+										{{ content }}
 								</section>
 
 							</div>
